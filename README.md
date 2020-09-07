@@ -9,6 +9,7 @@
 <h2> How to run </h2>
 
 ### Installation  
+material ui  
 ```
 $ npm install @materail-ui/core
 ```
@@ -39,41 +40,23 @@ npm start
 ```
 ex) const multer = require("multer");  
 const upload = multer({ dest: "./upload" });  
-```
-> module.exports를 사용하기  
+```  
 
 ### components : Customer
->
-/api/login
-```
-ex) 
-router.	get	("/api/login", async (ctx) => { 
-  await Member.findOne({
-    where: {
-      id: ctx.params.id,
-    },
-  })
-    .then((task) => {
-      if (task) {
-        ctx.body = task;
-      } else {
-        ctx.body = "Task does not exist";
-      }
-    })
-    .catch((err) => {
-      ctx.body = "error" + err;
-    }); 
-});
-```
+> react 고객 CRUD
 
 -------------------------------------------------------
 ## 
 -------------------------------------------------------
 
 ## 버그들
-Chat 기능에서 보내는 내용이 몇개씩 보내진다.  
-로그인이 아닌 랜덤유저를 생성해서 Chat한다.  
-로그인 컴포넌트는 아직 완성되지 않았다.  
+material-ui를 참고해서 만들다 보니 비활성화 되어 있는것 들이 있음  
+데이터가 없을 경우 progress바가 잘 작동하지 않음   
+
+## material ui를 쓰면서
+> 기존의 디자인 된 것을 가지고 오기 때문에 간단하고 편하게 만들 수 있다.  
+>
+
 
 ## 참고 자료
 https://www.youtube.com/watch?v=s2knmog2j1U&list=PLRx0vPvlEmdCED62ZIWCbI-6G_jcwmuFB 1~25강
