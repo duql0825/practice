@@ -2,9 +2,7 @@
 
 <h1> 개요 </h1>
 
-> 고객관리 시스템  
-> react material-ui  
-> express   
+> react material-ui & express & mysql 고객관리 project
 
 <h2> How to run </h2>
 
@@ -43,7 +41,28 @@ const upload = multer({ dest: "./upload" });
 ```  
 
 ### components : Customer
-> react 고객 CRUD
+> react 고객 CRUD  
+> Customer.js, CustomerAdd.js, CustomerDelete.js
+
+### App.js  
+> Customer components를 불러와서 출력  
+> handleValueChange를 통해 해당 고객 검색  
+> progress bar 사용  
+
+```
+import CircularProgress from "@material-ui/core/CircularProgress";
+
+progress = () => {
+    const { completed } = this.state;
+    this.setState({ completed: completed >= 100 ? 0 : completed + 1 });
+  };
+    
+<CircularProgress
+  className={classes.progress}
+  variant="determinate"
+  value={this.state.completed}
+/>
+ ```
 
 -------------------------------------------------------
 ## 
@@ -55,6 +74,7 @@ material-ui를 참고해서 만들다 보니 비활성화 되어 있는것 들�
 
 ## material ui를 쓰면서
 > 기존의 디자인 된 것을 가지고 오기 때문에 간단하고 편하게 만들 수 있다.  
+> material-ui는 필요한 component마다 import해줘야 한다.  
 >
 
 
